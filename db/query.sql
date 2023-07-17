@@ -13,4 +13,4 @@ INNER JOIN roles ON employees.role_id = roles.role_id
 INNER JOIN departments ON roles.department_id = departments.department_id
 LEFT JOIN employees AS managers ON employees.manager_id = managers.employee_id;
 
-INSERT INTO departments (department_name) VALUES ('New Department: ');
+INSERT INTO departments (department_name) VALUES ("New Department: ");

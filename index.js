@@ -94,4 +94,12 @@ function addDepartment() {
             type: 'input',
             message: 'Enter the name of the department: '
         })
+        .then((answer) => {
+            const query = 'INSERT INTO departments (department_name) VALUES ("New Department: ");'
+            connection.query(query, [answer.departmentName], (err,res) => {
+                if (err) throw err;
+                console.log('Department added!');
+                startApplication();
+            });
+        });
 }
