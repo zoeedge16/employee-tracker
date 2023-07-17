@@ -12,12 +12,12 @@ CREATE TABLE departments (
 CREATE TABLE roles (
     role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     role_title VARCHAR(100) NOT NULL,
-    salary DEC(10, 2) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
     department_id INT NOT NULL,
     FOREIGN KEY (department_id)
     REFERENCES departments(department_id)
 );
-
+/* I think this is where the error keeps coming from: line 27 and 28 */
 CREATE TABLE employees (
     employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
