@@ -59,3 +59,39 @@ function startApplication() {
             }
         });
 }
+
+function viewAllDepartments() {
+    const query = 'SELECT department_id, department_name FROM departments';
+    connection.query(query, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        startApplication();
+    });
+}
+
+function viewAllRoles() {
+    const query = 'roles.role_id, roles.role_title, roles.salary, departments.department_name FROM roles';
+    connection.query(query, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        startApplication();
+    });
+}
+
+function viewAllEmployees() {
+    const query = 'SELECT employees.employee_id, employees.first_name, employees.last_name, roles.role_title, departments.department_name, roles.salary, CONCAT (managers.first_name, " " , managers.last_name) AS manager_name FROM employees';
+    connection.query(query, (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        startApplication();
+    });
+}
+
+function addDepartment() {
+    inquirer
+        .prompt({
+            name: 'departmentName',
+            type: 'input',
+            message: 'Enter the name of the department: '
+        })
+}
