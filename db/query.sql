@@ -13,8 +13,8 @@ FROM employees
 INNER JOIN roles ON employees.role_id = roles.role_id 
 INNER JOIN departments ON roles.department_id = departments.department_id
 LEFT JOIN employees AS managers ON employees.manager_id = managers.employee_id;
-
-INSERT INTO departments (department_name) VALUES ("New Department: ");
+/* USE SET HERE INSTEAD OF VALUES */
+INSERT INTO departments (department_name)  ("New Department: ");
 
 INSERT INTO roles (role_title, salary, department_id) VALUES ("New role:", 1, 70000.00);
 
