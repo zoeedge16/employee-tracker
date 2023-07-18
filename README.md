@@ -19,3 +19,11 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
 
+## Deployment
+
+[Repository](https://github.com/zoeedge16/employee-tracker)
+
+## Walk Through
+[Walk-through Part 1](https://drive.google.com/file/d/1bdp5APRAgFGcrcPdUkuYELsUiiY37WM1/view?usp=drive_link)
+
+[Walk-through Part 2](https://drive.google.com/file/d/10IDAhStUvtRM0Gb62JMUcYtvyF-qJIRk/view?usp=drive_link)
